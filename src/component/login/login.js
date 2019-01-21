@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from '../styles/styles'
 import {
- Image, View, ImageBackground, TextInput, Text
+ Image, View, ImageBackground, TextInput, Text, TouchableHighlight
 } from 'react-native';
 
 export default class DemoPokemon extends Component {
@@ -19,7 +19,9 @@ export default class DemoPokemon extends Component {
                             <Text style={styles.text}>Register</Text>
                             <TextInput style={styles.form} placeholder="username" />
                             <TextInput style={styles.form} placeholder="password" />
-                            <Text style = {styles.text}>Login</Text>
+                            <TouchableHighlight style = {styles.login} >
+                                <Text style = {styles.text} >Login</Text>
+                            </TouchableHighlight>
                         </View>
                         <View></View>
                     </View>

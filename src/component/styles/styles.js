@@ -22,6 +22,10 @@ var styles = StyleSheet.create({
         backgroundColor: '#rgba(154, 169, 191, 0.3)',
         fontStyle: 'italic',
         color: 'white'
+    }, 
+    login : {
+     backgroundColor : 'rgba(69, 196, 64, 0.8)',
+    alignItems: 'center'
     }
 })
 
