@@ -1,17 +1,26 @@
-// Buoc 1: impoer thu vieb
 import React, {Component} from 'react';
 import {
-  AppRegistry, View, Text
-} from 'react-native';
+   Text, View
+}from 'react-native';
 
-export default class HelloWorld extends Component<{}> {
+export default class LoiChao extends Component<{}>{
   render(){
     return(
-      <View>
-        <Text>Hello Huyen vs En</Text>
-      </View>
-   );
+    <View>
+      <Text>Huyen</Text>
+      <HienThi></HienThi>
+     </View>
+      );
   }
 }
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+export class HienThi extends Component<{}> {
+	render(){
+		<View>
+		<Text>ND ben Component HienThi</Text>
+		</View>
+	}
+}
+
+
+// AppRegistry.registerComponent('HelloWorld', () => LoiChao);
