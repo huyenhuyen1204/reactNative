@@ -3,6 +3,10 @@ import {
     Text, View, StyleSheet, AppRegistry, TouchableOpacity, TouchableHighlight
 } from 'react-native';
 
+/**
+ * TouchableOpacity, TouchableHighlight hai button
+ */
+
 export default class Demo extends Component {
      click() {
         alert("func click");
@@ -47,4 +51,4 @@ var styles = StyleSheet.create({
     }
 })
 
-AppRegistry.registerComponent('HelloWorld', ()=> Demo)
+// AppRegistry.registerComponent('HelloWorld', ()=> Demo)

@@ -6,10 +6,10 @@
 
 // AppRegistry.registerComponent('HelloWorld', ()=> DemoPokemon);
 
-import App from './App';
+import Demo from './src/component/nextScreen/demo';
 import {
 	AppRegistry
 }
 from 'react-native';
 
-AppRegistry.registerComponent('HelloWorld', ()=> App);
+AppRegistry.registerComponent('HelloWorld', ()=> Demo);
