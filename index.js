@@ -1,15 +1,7 @@
-// import DemoPokemon from './src/component/login/login';
-// import {
-// 	AppRegistry
-// }
-// from 'react-native';
-
-// AppRegistry.registerComponent('HelloWorld', ()=> DemoPokemon);
-
-import App from './App';
+import Caculator from './src/component/Cacurlator/caculator';
 import {
 	AppRegistry
 }
 from 'react-native';
 
-AppRegistry.registerComponent('HelloWorld', ()=> App);
+AppRegistry.registerComponent('HelloWorld', ()=> Caculator);
