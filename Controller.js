@@ -2,17 +2,28 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 //de noi state => App
 import { connect } from 'react-redux';
-import Controller from './Controller';
-
-class App extends Component {
+ class Controller extends Component {
     render() {
         return (
             <View style={styleApp.container}>
-                <View style={styleApp.header}>
-                    <Text style={styleApp.appName}>EXAM 1: {'\n'}APP COMPONENT</Text>
-                    <Text style={styleApp.value}>{this.props.myValue}</Text>
+                <View style={styleController.controller}>
+                    <Text style={styleController.controllName}>CONTROLLER COMPONENT</Text>
+                    <View style={styleController.buttonContainer}>
+                        <TouchableOpacity 
+                        style={styleController.button}
+                        onPress={()=>{
+                            this.props.dispatch({type: 'UP'})
+                        }}>
+                            <Text style={styleController.buttonText}>+</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styleController.button}
+                        onPress={()=>{
+                            this.props.dispatch({type: 'DOWN'})
+                        }}>
+                            <Text style={styleController.buttonText}>-</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-                <Controller/>
             </View>
         );
     }
@@ -72,8 +83,4 @@ const styleController = StyleSheet.create({
     }
 });
 
-function mapStateToProps(state) {
-return { myValue : state.value };
-}
-
-export default connect(mapStateToProps)(App);
+export default connect()(Controller);

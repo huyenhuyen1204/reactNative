@@ -13,10 +13,11 @@ import App from './App';
 // Tich hop react-redux can provider
 import {Provider} from 'react-redux';
 import {name as appName} from './app.json';
+import {createStore} from 'redux'
 
-const {createStore} = require('redux');
+// const {createStore} = require('redux');
 
-const defaultState  = {value : 0};
+const defaultState  = {value : 0, highlight: };
 
 /**
  * Sd state, action de tinh toan state ms
@@ -30,22 +31,22 @@ const reducer = (state = defaultState, action) => {
     return state;
 }
 
-const store = createStore(reducer);
+const reduxStore = createStore(reducer);
 /**
  *  Action Up, Down
  * How to tiep can gia tri state?
  * Thay doi gia tri state?
  */
 
- // Chi dc get, k dc set
- const mState = store.getState().value;
- console.log(mState);
+//  // Chi dc get, k dc set
+//  const mState = store.getState().value;
+//  console.log(mState);
 
-//Thay doi va nhan vao 1 action = obj
- store.dispatch({type : 'UP'});
- store.dispatch({type : 'UP'});
+// //Thay doi va nhan vao 1 action = obj
+//  store.dispatch({type : 'UP'});
+//  store.dispatch({type : 'UP'});
 
- console.log(store.getState().value);
+//  console.log(store.getState().value);
 
  /**
   * Cau truc tao:
@@ -57,11 +58,14 @@ const store = createStore(reducer);
 export default class DemoRedux extends Component {
     render(){
         return( 
-            <Provider store={store}>
+            /**
+             * All trong App deu sd dc store
+             */
+            <Provider store={reduxStore}>
             <App />
             </Provider>
         );
     }
 }
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => DemoRedux);
